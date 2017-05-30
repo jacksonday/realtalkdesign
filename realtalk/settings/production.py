@@ -24,7 +24,7 @@ SECRET_KEY = 'xwvy57i^@s*g9jhasm31omkay=qh#cgnd)-e86xeki$o40uegv'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['realtalkdesign.herokuapp.com']
 
 
 # Application definition
