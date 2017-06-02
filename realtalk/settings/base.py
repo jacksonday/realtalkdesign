@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
@@ -26,6 +26,16 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['0.0.0.0']
 
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_HOST_USER = 'youremail@gmail.com' #my gmail username
+# EMAIL_HOST_PASSWORD = 'yourpassword' #my gmail password
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
+# DEFAULT_FROM_EMAIL = "Justin <hungrypy@gmail.com>"
+
+
+ADMINS = [('Justin', EMAIL_HOST_USER)]
+MANAGERS = ADMINS
 
 # Application definition
 
