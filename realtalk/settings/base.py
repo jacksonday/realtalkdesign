@@ -34,8 +34,8 @@ ALLOWED_HOSTS = ['0.0.0.0']
 # DEFAULT_FROM_EMAIL = "Justin <hungrypy@gmail.com>"
 
 
-ADMINS = [('Justin', EMAIL_HOST_USER)]
-MANAGERS = ADMINS
+# ADMINS = [('Justin', EMAIL_HOST_USER)]
+# MANAGERS = ADMINS
 
 # Application definition
 
