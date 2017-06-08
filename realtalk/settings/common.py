@@ -153,4 +153,3 @@ STATIC_ROOT = join(BASE_DIR, "live-static", "static-root")
 MEDIA_URL = "/media/"
 
 MEDIA_ROOT = join(BASE_DIR, "live-static", "media-root")
-print(MEDIA_ROOT)

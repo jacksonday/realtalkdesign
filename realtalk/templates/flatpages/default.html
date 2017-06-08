@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +12,7 @@
   <nav class="navbar navbar-default">
     <div class="container">
       <div class="navbar-header">
-        <img class="navbar-brand" src="/static/logo.png"/>
+        <img class="navbar-brand" src='{% static "images/logo.png" %}'/>
       </div>
     </div>
   </nav>
