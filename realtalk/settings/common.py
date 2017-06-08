@@ -99,12 +99,8 @@ WSGI_APPLICATION = 'realtalk.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.',
-        'NAME': '',
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',
-        'PORT': '',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
@@ -147,9 +143,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = (
-    join(BASE_DIR, "static"),
-)
+STATICFILES_DIRS = [
+    join(BASE_DIR, "assets"),
+]
 
 
 STATIC_ROOT = join(BASE_DIR, "live-static", "static-root")
@@ -157,3 +153,4 @@ STATIC_ROOT = join(BASE_DIR, "live-static", "static-root")
 MEDIA_URL = "/media/"
 
 MEDIA_ROOT = join(BASE_DIR, "live-static", "media-root")
+print(MEDIA_ROOT)
