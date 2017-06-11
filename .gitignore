@@ -1,4 +1,4 @@
-realtalk/settings/local.py
+realtalk/settings/dev.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -6,7 +6,7 @@ __pycache__/
 *$py.class
 
 # live-static folder
-realtalk/live-static
+realtalk/live-static/
 
 # C extensions
 *.so
@@ -102,3 +102,9 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# osx file
+.DS_Store
+
+# local db files
+*.sqlite3

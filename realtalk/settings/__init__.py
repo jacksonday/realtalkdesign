@@ -1,8 +1,8 @@
 # from .base import *
-from .production import *
+from .prod import *
 
 try:
-    from .local import *
+    from .dev import *
 except:
     pass
  
