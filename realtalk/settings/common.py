@@ -52,7 +52,7 @@ DJANGO_APPS = [
     'django.contrib.flatpages',
 ]
 
-LOCAL_APPS = []
+LOCAL_APPS = ['realtalk.apps.pages']
 
 THIRD_PARTY_APPS = []
 
