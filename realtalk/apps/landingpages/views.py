@@ -6,7 +6,4 @@ from django.views.generic import View
 
 class HomeView(View):
 	def get(self, request, *args, **kwargs):
-		return render(request, "pages/home.html", {})
-
-
-# Create your views here.
+		return render(request, "landingpages/home.html", {})

@@ -17,11 +17,10 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from django.contrib.flatpages import views
 
-from realtalk.apps.pages.views import HomeView
+from realtalk.apps.landingpages.views import HomeView
 
 urlpatterns = [
-    # url(r'^pages/', include('django.contrib.flatpages.urls')),
     url(r'^admin/', admin.site.urls),
     url(r'^$', HomeView.as_view(), name='home'),
-    url(r'^$', views.flatpage, {'url': '/signup/'}, name='signup'),
+    url(r'^signup/', views.flatpage, {'url': '/signup/'}, name='signup'),
 ]
