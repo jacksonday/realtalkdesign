@@ -2,32 +2,42 @@
 {% load staticfiles %}
 
 {% block content %}
-<h2>Get candid feedback on your portfolio from fellow designers.</h2>
+<link href="{% static 'css/landingpage.css'%}" rel="stylesheet">
 
-<p>Coming soon.<br>Sign up to get an email when it's ready!</p>
-
-<form class="email-form" method="post" id="reviewee" action="reviewee-submit" next="thank-you-url">
-  <p class="lbl">I'm interested in getting my portfolio reviewed.</p>
-  <input placeholder='email address' type='email'> </input>
-</form>
-
-<form class="email-form" method="post" id="reviewer" action="reviewer-submit" next="thank-you-url
-  <p class="label">I'm interested in being a reviewer.</p>
-  <input placeholder='email address' type='email'> </input>
-</form>
-
-
-<div class="designer role-description">
-<h3>For product and UX designers of all levels of experience</h3>
-<p>When you've spent hours staring at your portfolio, it's hard to evaluate it objectively. You can spend hours reading how-to articles and sweating the details, but in the end, your portfolio is made for real people to interact with.</p>
-<p>Submit your portfolio to get candid feedback from <b>three fellow designers</b> with similar or higher levels of experience as you. (And yes, it's free.)</p>
+<div class="logo">
+  <img src="{% static 'images/logo.png'%}">
 </div>
 
-<div class="reviewer role-description">
-<h3>Want to help? Volunteer to be a reviewer!</h3>
-<p>Maybe you've gotten help from fellow designers before and want to pay it forward. Or maybe you've gotten requests for advice in the past, and remember how good it felt to help out.</p>
-<p>Whether you're just starting out, or you have decades of experience, you have ≤b>your own perspective</b> to offer.</p>
-<p>You'll take a short survey to help us match you, and we'll send you three portfolios to review.
+<div class="offer">
+  <h2>Get candid feedback on your portfolio from fellow designers.</h2>
+</div>
+
+<div class="forms">
+  <p>Coming soon.<br>Sign up to get an email when it's ready!</p>
+
+  <form class="email-form" method="post" id="submitter" action="reviewee-submit" next="thank-you-url">
+    <p class="label">I'm interested in getting my portfolio reviewed.</p>
+    <input placeholder='email address' type='email'> </input>
+  </form>
+
+  <form class="email-form" method="post" id="reviewer" action="reviewer-submit" next="thank-you-url">
+    <p class="label">I'm interested in being a reviewer.</p>
+    <input placeholder='email address' type='email'> </input>
+  </form>
+</div>
+
+
+<div class="pitchbox">
+  <h3>For product and UX designers of all levels of experience</h3>
+  <p>When you've spent hours staring at your portfolio, it's hard to evaluate it objectively. You can spend hours reading how-to articles and sweating the details, but in the end, your portfolio is made for real people to interact with.</p>
+  <p>Submit your portfolio to get candid feedback from <b>three fellow designers</b> with similar or higher levels of experience as you. (And yes, it's free.)</p>
+</div>
+
+<div class="pitchbox">
+  <h3>Want to help? Volunteer to be a reviewer!</h3>
+  <p>Maybe you've gotten help from fellow designers before and want to pay it forward. Or maybe you've gotten requests for advice in the past, and remember how good it felt to help out.</p>
+  <p>Whether you're just starting out, or you have decades of experience, you have ≤b>your own perspective</b> to offer.</p>
+  <p>You'll take a short survey to help us match you, and we'll send you three portfolios to review.
 </div>
 
 {% endblock %}

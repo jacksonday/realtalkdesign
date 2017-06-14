@@ -8,6 +8,9 @@ realtalk/db.sqlite3
 # Specific Directories
 realtalk/live-static/
 
+# Ignore docs files
+realtalk/assets/.sass-cache
+realtalk/assets/.sass-cache/*
 
 # Specific Files
 realtalk/settings/dev.py
