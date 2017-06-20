@@ -13,14 +13,22 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
+from django.conf import settings
 from django.conf.urls import url, include
 from django.contrib import admin
-from django.contrib.flatpages import views
+# from django.contrib.flatpages import views
+from django.contrib.staticfiles import views
+
 
 from realtalk.apps.landingpages.views import HomeView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', HomeView.as_view(), name='home'),
-    url(r'^signup/', views.flatpage, {'url': '/signup/'}, name='signup'),
+    # url(r'^signup/', views.flatpage, {'url': '/signup/'}, name='signup'),
 ]
+
+if settings.DEBUG:
+    urlpatterns += [
+        url(r'^static/(?P<path>.*)$', views.serve),
+    ]
