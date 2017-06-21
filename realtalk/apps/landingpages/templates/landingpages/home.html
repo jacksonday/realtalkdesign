@@ -3,17 +3,20 @@
 
 {% block content %}
 <link href="{% static 'css/landingpage.css'%}" rel="stylesheet">
-
 <div class="logo">
   <img src="{% static 'images/logo.png'%}">
 </div>
 
 <div class="offer">
-  <h2>Get candid feedback on your portfolio from fellow designers.</h2>
+  <p>Get candid feedback on your portfolio from fellow designers.</p>
 </div>
 
 <div class="forms">
-  <p>Coming soon.<br>Sign up to get an email when it's ready!</p>
+  <p class="cta">Coming soon.<br>Sign up to get an email when it's ready!</p>
+  <form method="POST" action=""> {% csrf_token %}
+  {{ form.as_p }}
+  <input type="submit" value="Submit" class="btn btn-default">
+  </form>
 
   <form class="email-form" method="post" id="submitter" action="reviewee-submit" next="thank-you-url">
     <p class="label">I'm interested in getting my portfolio reviewed.</p>
@@ -37,7 +40,7 @@
   <h3>Want to help? Volunteer to be a reviewer!</h3>
   <p>Maybe you've gotten help from fellow designers before and want to pay it forward. Or maybe you've gotten requests for advice in the past, and remember how good it felt to help out.</p>
   <p>Whether you're just starting out, or you have decades of experience, you have ≤b>your own perspective</b> to offer.</p>
-  <p>You'll take a short survey to help us match you, and we'll send you three portfolios to review.
+  <p>You'll take a short survey to help us match you, and we'll send you three portfolios to review.</p>
 </div>
 
 {% endblock %}

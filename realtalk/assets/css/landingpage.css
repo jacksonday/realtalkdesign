@@ -5,6 +5,13 @@ a, a:focus, a:hover { color: #823892; text-align: center; }
 /* Custom default button */
 .btn-default, .btn-default:hover, .btn-default:focus { color: #333; text-shadow: none; /* Prevent inheritance from `body` */ background-color: #fff; border: 1px solid #fff; }
 
-/* Base structure */
-body { color: #823892; background: #f9e3aa; text-align: center; font-family: Avenir-Medium; }
-body .logo img { height: 75px; }
+/* landing page styles */
+.offer { width: 620px; margin: auto; margin-top: 124px; text-align: center; }
+.offer p { font-size: 36px; letter-spacing: 0.4px; }
+
+.forms p { color: #4A4A4A; }
+.forms .cta { font-size: 24px; line-height: 33px; }
+.forms .label { font-size: 18px; }
+
+body { color: #823892; background: #f9e3aa; text-align: center; font-family: Avenir-Medium; margin: 0px; padding: 0px; }
+body .logo { margin-top: 97px; }

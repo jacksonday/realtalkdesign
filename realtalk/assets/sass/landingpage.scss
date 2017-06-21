@@ -5,8 +5,7 @@
  */
  $purple: #823892;
  $amber: #f9e3aa;
-
-// junk vvvvvvvvvvv 
+ $dark-grey: #4A4A4A;
 
 
 /* Links */
@@ -29,14 +28,32 @@ a:hover {
 
 
 /*
- * Base structure
+ * landing page styles
  */
 
-// html,
-// body {
-//   height: 100%;
-//   background: ;
-// }
+.offer {
+  width: 620px;
+  margin: auto;
+  margin-top: 124px;
+  text-align: center;
+  p{
+    font-size: 36px;
+    letter-spacing: 0.4px;
+  }
+}
+
+.forms {
+  p {
+    color: $dark-grey;
+  }
+  .cta {
+    font-size: 24px;
+    line-height: 33px;
+  }
+  .label {
+    font-size: 18px;
+  }
+}
 body {
   color: $purple;
   background: $amber;
@@ -44,7 +61,12 @@ body {
   // text-shadow: 0 1px 3px rgba(0,0,0,.5);
   font-family:Avenir-Medium;
   // font-size:36px;
-  .logo img{
-    height: 75px;
+  margin: 0px;
+  padding: 0px;
+  .logo {
+    margin-top: 97px;
+    img{
+      // height: 75px;
+    }
   }
 }
