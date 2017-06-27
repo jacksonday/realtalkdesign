@@ -1,5 +1,6 @@
 """Development settings and globals."""
 from .common import *
+from os import environ
 import dj_database_url
 
 # Quick-start development settings - unsuitable for production
@@ -7,6 +8,12 @@ import dj_database_url
 
 PRODUCTION = True
 
+
+########## SECRET CONFIGURATION
+# See: https://docs.djangoproject.com/en/dev/ref/settings/#secret-key
+SECRET_KEY = environ.get('SECRET_KEY', SECRET_KEY)
+print(os.environ.get('SECRET_KEY'))
+########## END SECRET CONFIGURATION
 
 ALLOWED_HOSTS = ['realtalkdesign.herokuapp.com']
 
