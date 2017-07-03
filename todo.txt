@@ -1,0 +1,3 @@
+Adjust css styles (see sketch project): 
+	buttons (color):
+		active, disabled, onHover, onClick. 

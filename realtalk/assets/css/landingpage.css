@@ -3,7 +3,7 @@
 a, a:focus, a:hover { color: #823892; text-align: center; }
 
 /* Custom default button */
-.btn-default, .btn-default:hover, .btn-default:focus { color: #333; text-shadow: none; /* Prevent inheritance from `body` */ background-color: #fff; border: 1px solid #fff; }
+.btn-default, .btn-default:hover, .btn-default:focus { color: #fff; text-shadow: none; /* Prevent inheritance from `body` */ background-color: #823892; border: 1px solid #fff; }
 
 /* landing page styles */
 .offer { width: 620px; margin: auto; margin-top: 124px; text-align: center; }

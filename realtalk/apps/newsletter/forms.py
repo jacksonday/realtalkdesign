@@ -1,5 +1,5 @@
 from django import forms
-from .models import Join
+from .models import RevJoin, SubJoin
 
 class JoinForm(forms.ModelForm):
 	email = forms.EmailField(label='', 
@@ -7,25 +7,29 @@ class JoinForm(forms.ModelForm):
 					 attrs={'placeholder':'email address', 
 					 		# 'class':'form-control'
 					 		}))
+
+class RevJoinForm(JoinForm):
+
 	class Meta:
-		model = Join
+		model = RevJoin
 		fields = ['email']
 
 	def clean_email(self, *args, **kwargs):
 		email = self.cleaned_data.get("email")
-		qs = Join.objects.filter(email__iexact=email)
+		qs = RevJoin.objects.filter(email__iexact=email)
 		if qs.exists():
-			raise forms.ValidationError("This email already exists")
+			raise forms.ValidationError("This email address is already signed up as a reviewer")
 		return email
 
-# from django import forms
-# from .models import RevJoin
+class SubJoinForm(JoinForm):
 
-# class RevJoinForm(forms.ModelForm):
-# 	class Meta:
-# 		model = Join
-# 		fields = ['email']
+	class Meta:
+		model = SubJoin
+		fields = ['email']
 
-# class SubJoinForm(forms.ModelForm):
-# 	class Meta:
-# 		model = SubJoin
+	def clean_email(self, *args, **kwargs):
+		email = self.cleaned_data.get("email")
+		qs = SubJoin.objects.filter(email__iexact=email)
+		if qs.exists():
+			raise forms.ValidationError("This email address is already signed up as a submitter")
+		return email
