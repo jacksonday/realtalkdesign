@@ -20,11 +20,13 @@ from django.contrib import admin
 from django.contrib.staticfiles import views
 
 
-from realtalk.apps.landingpages.views import HomeView
+from realtalk.apps.landingpages.views import home, HomeView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    # url(r'^$', home, name='home'),
     url(r'^$', HomeView.as_view(), name='home'),
+
     # url(r'^signup/', views.flatpage, {'url': '/signup/'}, name='signup'),
 ]
 
