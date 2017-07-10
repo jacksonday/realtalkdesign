@@ -16,12 +16,14 @@ from ..newsletter.forms import RevJoinForm, SubJoinForm
 
 class HomeView(SuccessMessageMixin, CreateView):
 	template_name = 'landingpages/home.html'
-	form_class = JoinForm
+	form_classes = [RevJoinForm, SubJoinForm]
 	success_url = '/'
-	def get_context_data(self, *args, **kwargs):
-		context = super(HomeView, self).get_context_data(*args, **kwargs)
-		context['object'] = Page.objects.filter(featured=True).first() #.order_by("?").first()
- 		return context
+	def get(self, request, *args, **kwargs):
+		return render(request, self.template_name, {})
+	# def get_context_data(self, *args, **kwargs):
+	# 	context = super(HomeView, self).get_context_data(*args, **kwargs)
+	# 	context['object'] = Pages.objects.filter(featured=True).first() #.order_by("?").first()
+ # 		return context
 	def get_success_message(self, cleaned_data):
 		print(cleaned_data)
 		return "Thank you for joining!"
