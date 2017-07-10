@@ -1,10 +1,10 @@
 {% extends "base.html" %}
-{% load staticfiles %}
+{% load static %}
 
 {% block content %}
-<link href="{% static 'css/landingpage.css'%}" rel="stylesheet">
+<link type="text/css" href="{% static 'css/landingpage.css'%}" rel="stylesheet">
 <div class="logo">
-  <img src="{% static 'images/logo.png'%}">
+  <img src="{% static 'images/logo.png'%}" alt="Hello World!">
 </div>
 
 <div class="offer">

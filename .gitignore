@@ -6,7 +6,7 @@
 realtalk/db.sqlite3
 
 # Specific Directories
-# realtalk/live-static/
+realtalk/staticfiles/
 
 # Ignore docs files
 realtalk/assets/.sass-cache

@@ -151,8 +151,8 @@ STATICFILES_DIRS = [
 ]
 
 
-STATIC_ROOT = join(BASE_DIR, "live-static", "static-root")
+STATIC_ROOT = join(BASE_DIR, "staticfiles")
 
-MEDIA_URL = "/media/"
+# MEDIA_URL = "/media/"
 
-MEDIA_ROOT = join(BASE_DIR, "live-static", "media-root")
+# MEDIA_ROOT = join(BASE_DIR, "live-static", "media-root")
