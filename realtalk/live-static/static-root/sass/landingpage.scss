@@ -1,0 +1,52 @@
+@import "compass/utilities/";
+
+/*
+ * Globals
+ */
+ $purple: #823892;
+ $amber: #f9e3aa;
+
+// junk vvvvvvvvvvv 
+
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: $purple;
+  text-align: center;
+}
+
+/* Custom default button */
+.btn-default,
+.btn-default:hover,
+.btn-default:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritance from `body` */
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+
+
+/*
+ * Base structure
+ */
+
+// html,
+// body {
+//   height: 100%;
+//   background: ;
+// }
+body {
+  color: $purple;
+  background: $amber;
+  text-align: center;
+  // text-shadow: 0 1px 3px rgba(0,0,0,.5);
+  font-family:Avenir-Medium;
+  // font-size:36px;
+  .logo {
+    display: none;
+    width: 260px;
+    height: 40px;
+  }
+}
