@@ -8,6 +8,7 @@ from django.views.generic import View, FormView, CreateView
 
 from django.contrib.messages.views import SuccessMessageMixin
 
+# from .landingpages.models import LandingPage
 from ..newsletter.forms import RevJoinForm, SubJoinForm
 
 # class HomeView(View):
@@ -22,7 +23,7 @@ class HomeView(SuccessMessageMixin, CreateView):
 		return render(request, self.template_name, {})
 	# def get_context_data(self, *args, **kwargs):
 	# 	context = super(HomeView, self).get_context_data(*args, **kwargs)
-	# 	context['object'] = Pages.objects.filter(featured=True).first() #.order_by("?").first()
+	# 	context['object'] = LandingPage.objects.filter(featured=True).first() #.order_by("?").first()
  # 		return context
 	def get_success_message(self, cleaned_data):
 		print(cleaned_data)
