@@ -35,6 +35,21 @@ def home(request):
 	s_form = SubJoinForm
 	return render(request, template)
 
+	if request.method == 'POST':
+	    bannedphraseform = BannedPhraseForm(request.POST, prefix='banned')
+	    if bannedphraseform.is_valid():
+	        bannedphraseform.save()
+	else:
+	    bannedphraseform = BannedPhraseForm(prefix='banned')
+
+	if request.method == 'POST' and not bannedphraseform.is_valid():
+	    expectedphraseform = ExpectedPhraseForm(request.POST, prefix='expected')
+	    bannedphraseform = BannedPhraseForm(prefix='banned')
+	    if expectedphraseform.is_valid():
+	        expectedphraseform.save()
+
+else:
+    expectedphraseform = ExpectedPhraseForm(prefix='expected')
 def current_datetime(request):
     now = datetime.datetime.now()
     html = "<html><body>It is now %s.</body></html>" % now
@@ -42,3 +57,4 @@ def current_datetime(request):
 # Remove above when finished
 #
 #
+
